@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/innazozulia/MagazineWithArticlesReactJsExpressMySql.git"
+  },
+  "author": "inna zozulia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/innazozulia/MagazineWithArticlesReactJsExpressMySql/issues"
+  },
+  "homepage": "https://github.com/innazozulia/MagazineWithArticlesReactJsExpressMySql#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
