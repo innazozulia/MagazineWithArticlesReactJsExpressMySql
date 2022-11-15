@@ -5,8 +5,8 @@ const Home = () => {
   const posts = [
     {
       id: 1,
-      title: "Lorem",
-      desc: "Lorem skdjgsd sjdgfs kdgsldnf",
+      title: "jkz zdkhd khd",
+      desc: "Ptristique senectus. Aenean sed adipiscing diam donec adipiscing tristique risus. Senectus et netus et malesuada fames. Tellus in hac habitasse platea dictumst vestibulum rhoncus est. Libero justo laoreet sit amet. Rutrum tellus pellentesque eu tincidunt tortor aliquam. Netus et malesuada fames ac turpis egestas maecenas pharetra. Dictum fusce ut placerat orci nulla pellentesque dignissim enim. Quis enim lobortis scelerisque fermentum dui faucibus. Sollicitudin nibh sit amet commodo nulla facilisi. Egestas sed tempus urna et pharetra pharetra massa. Magna fringilla urna porttitor rhoncus.eur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       img: "https://cdn.pixabay.com/photo/2022/10/19/01/02/woman-7531315__480.png",
     },
     {

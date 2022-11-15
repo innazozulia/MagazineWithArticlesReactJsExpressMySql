@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -16,9 +15,14 @@
     "url": "https://github.com/innazozulia/MagazineWithArticlesReactJsExpressMySql/issues"
   },
   "homepage": "https://github.com/innazozulia/MagazineWithArticlesReactJsExpressMySql#readme",
+  "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.20"
   }
 }
