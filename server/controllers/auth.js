@@ -4,9 +4,9 @@ const jwt = require("jsonwebtoken");
 
 const register = (req, res) => {
   //CHECK EXISTING USER
-  const q = "SELECT * FROM users WHERE email = ? OR username = ?";
+  const quryRegister = "SELECT * FROM users WHERE email = ? OR username = ?";
 
-  db.query(q, [req.body.email, req.body.username], (err, data) => {
+  db.query(quryRegister, [req.body.email, req.body.username], (err, data) => {
     if (err) return res.status(500).json(err);
     if (data.length) return res.status(409).json("User already exists!");
 

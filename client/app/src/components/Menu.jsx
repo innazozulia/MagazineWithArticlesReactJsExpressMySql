@@ -1,32 +1,47 @@
 import React from "react";
+import axios from "axios";
 
-const Menu = () => {
-  const posts = [
-    {
-      id: 1,
-      title: "Lorem",
-      desc: "Lorem skdjgsd sjdgfs kdgsldnf",
-      img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 2,
-      title: "Lorem",
-      desc: "Lorem skdjgsd sjdgfs kdgsldnf",
-      img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 3,
-      title: "Lorem",
-      desc: "Lorem skdjgsd sjdgfs kdgsldnf",
-      img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 4,
-      title: "Lorem",
-      desc: "Lorem skdjgsd sjdgfs kdgsldnf",
-      img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-    },
-  ];
+const Menu = ({ cat }) => {
+  const [posts, setPosts] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/posts/?cat=${cat}`);
+        setPosts(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [cat]);
+
+  // const posts = [
+  //   {
+  //     id: 1,
+  //     title: "Lorem",
+  //     desc: "Lorem skdjgsd sjdgfs kdgsldnf",
+  //     img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Lorem",
+  //     desc: "Lorem skdjgsd sjdgfs kdgsldnf",
+  //     img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Lorem",
+  //     desc: "Lorem skdjgsd sjdgfs kdgsldnf",
+  //     img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Lorem",
+  //     desc: "Lorem skdjgsd sjdgfs kdgsldnf",
+  //     img: "https://images.unsplash.com/photo-1666624481302-3a9920b039b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //   },
+  // ];
   return (
     <div className="menu">
       <h1>Other posts yuo make like</h1>
@@ -35,7 +50,7 @@ const Menu = () => {
           key={post.id}
           className="post">
           <img
-            src={post.img}
+            src={`../upload/${post.img}`}
             alt=""
           />
           <h2>{post.title}</h2>
