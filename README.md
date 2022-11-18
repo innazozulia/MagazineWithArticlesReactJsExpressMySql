@@ -11,24 +11,24 @@ Front: ReactJS Back: NextJS, Express  DB: MySql
 -- client side commant to run npm start
 
 Server side npm packages:
- "bcrypt"
- "cookie-parser"
- "express"
- "jsonwebtoken"
- "multer"
- "mysql"
- "mysql2"
- "nodemon"
+ - "bcrypt"
+ - "cookie-parser"
+ - "express"
+ - "jsonwebtoken"
+ - "multer"
+ - "mysql"
+ - "mysql2"
+ - "nodemon"
 
 
 Client side npm packages:
 
-"axios"
-"moment"
-"react"
-"react-dom"
-"react-quill"
-"react-router-dom"
+- "axios"
+- "moment"
+- "react"
+- "react-dom"
+- "react-quill"
+- "react-router-dom"
 
 Screenshots:
 Register:
