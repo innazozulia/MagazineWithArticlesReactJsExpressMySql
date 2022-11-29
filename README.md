@@ -4,11 +4,11 @@ Web application for articles, there are categories so that members can quickly f
 
 Front: ReactJS Back: NextJS, Express  DB: MySql
 
--- to install dependences npm i 
+-- to install dependences  `npm i`
 
--- servser side command to run npm start
+-- servser side command to run  `npm start`
 
--- client side commant to run npm start
+-- client side commant to run `npm start`
 
 Server side npm packages:
  - "bcrypt"
